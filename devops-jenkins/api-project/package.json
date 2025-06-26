@@ -1,0 +1,11 @@
+{
+  "name": "api-project",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cypress run",
+    "install": "npm install"
+  },
+  "devDependencies": {
+    "cypress": "^12.15.0"
+  }
+}
