@@ -2,9 +2,23 @@ pipeline {
   agent any
 
   stages {
+
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/ThiagoHLdev/DevOps.git'
+      }
+    }
+
     stage('Install Dependencies') {
       steps {
         sh 'npm install'
+      }
+    }
+
+    stage('Subir servidor') {
+      steps {
+        bat 'start /b npm start'
+        sleep 5 // dá um tempo para o servidor subir
       }
     }
 
